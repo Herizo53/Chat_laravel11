@@ -29,11 +29,3 @@ Route::middleware('auth')->group(function () {
     Route::post('/sendmessage', [AuthController::class, 'sendmessage'])->name('send');
     Route::post('/pub', [AuthController::class, 'publier'])->name('publications');
 });
-
-
-// Ajax
-
-use App\Http\Controllers\UploadController;
-
-Route::get('/file', [UploadController::class, 'file'])->name('file');
-Route::post('/upload', [UploadController::class, 'store'])->name('upload.store');
