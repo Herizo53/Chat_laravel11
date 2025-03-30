@@ -1,0 +1,148 @@
+/***********************    Couleur     **********************/
+:root{
+    ---color1 : #FF895C;
+    ---color2 : #FD4857;
+    ---color3 : #EE2D6A;
+    ---color4 : #9226BD;
+    ---color5 : #1C1F2F;
+    ---color6 : #121623;
+    ---color7 : #161929;
+    ---color8 : #12F713;
+    ---color9 : #F90108;
+    ---colorIcone : rgb(170, 166, 166); 
+}
+
+/**********************     Body    ****************************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/********************* Container    ****************************/
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: var(---color5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container h4{
+    text-align: center;
+    color: var(---colorIcone);
+}
+
+.container form{
+    background-color: var(---color6);
+    padding: 25px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.containerFluid{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.containerFluid input{
+    width: 400px;
+    border: none;
+    outline: none;
+    color: var(---colorIcone);
+    font-size: 16px;
+    padding: 9px 10px 9px 10px;
+    background-color: var(---color5);
+    border-radius: 3px;
+}
+
+.containerFluid label{
+    color: var(---colorIcone);
+}
+
+.container button{
+    outline: none;
+    border: none;
+    background-color: var(---color5);
+    color: var(---colorIcone);
+    font-size: 16px;
+    padding: 10px;
+    transition: 0.3s ease;
+    margin-top: 10px;
+}
+
+.container button:hover{
+    color: var(---color3);
+}
+
+.container p{
+    color: var(---colorIcone);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.container a{
+    text-decoration: none;
+    color: var(---color4);
+}
+
+.parent_file{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(---color5);
+    color: var(---colorIcone);
+    font-size: 16px;
+    padding: 9px;
+}
+
+.parent_file input{
+    position: absolute;
+    opacity: 0;
+}
+
+/* Notification */
+.notification {
+    width: fit-content;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1C1F2F;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    transition: top 0.5s ease;
+    z-index: 9999;
+  }
+
+  .notification.show {
+    top: 20px;
+  }
+
+@media (max-width: 495px) {
+    .container{
+        padding: 20px;
+    }
+
+    .container form{
+        width: 100%;
+    }
+
+    .containerFluid input{
+        width: 100%;
+    }
+}
